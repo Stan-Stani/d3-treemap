@@ -60,6 +60,10 @@ fetch(
         .style('fill', d => "#" + (16777215 % Math.round((d.x1 - d.x0) * (d.y1 - d.y0))).toString(16))
 
 
+        svgWrapper
+            .attr('viewBox', `0 0 ${hierarchy.x1} ${hierarchy.y1}`)
+            .attr('preserveAspectRatio', 'xMidYMid')
+
     })
   
 
