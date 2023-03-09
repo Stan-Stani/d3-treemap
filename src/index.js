@@ -43,7 +43,7 @@ fetch(
         
         hierarchy.sum(d => d.hasOwnProperty("value") ? d.value : 0);
         hierarchy.sort((a, b) => b.height - a.height || b.value - a.value);
-        let treemapFunc = d3.treemap().size([WIDTH,HEIGHT]);
+        let treemapFunc = d3.treemap().size([WIDTH,HEIGHT]).padding(5);
         treemapFunc(hierarchy);
         console.log(hierarchy);
 
